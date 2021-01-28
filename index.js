@@ -94,24 +94,24 @@ Person.prototype.toString = function(){
           + Should return a string "Playing with x", x being the favorite toy.
   */
  function Baby(name, age, favoriteToy) {
-   Person.call(this, name, age, stomach);
+   Person.call(this, name, age);
    this.favoriteToy = favoriteToy;
   }
 
   Baby.prototype = Object.create(Person.prototype);
 
-  Baby.prototype.play = function(favoriteToy){
-    return `Playing with ${favoriteToy}`;
+  Baby.prototype.play = function(){
+    return `Playing with ${this.favoriteToy}`;
   }
  
   
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. Implicit Binding - when the function is invoked, "this" refers to the object it is nested inside of.
+    2. .call - we assign "this" to a specifc object of choice, by passing in individual arguments
+    3. .apply - same as .call except arguments are passed in as an array
+    4. .bind - similar to .call and .apply except it doesn't inherently invoke the function, it returns another function that can be used later
   */
   
   
