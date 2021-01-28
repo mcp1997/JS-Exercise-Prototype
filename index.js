@@ -108,10 +108,10 @@ Person.prototype.toString = function(){
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. Implicit Binding - when the function is invoked, "this" refers to the object it is nested inside of.
-    2. .call - we assign "this" to a specifc object of choice, by passing in individual arguments
-    3. .apply - same as .call except arguments are passed in as an array
-    4. .bind - similar to .call and .apply except it doesn't inherently invoke the function, it returns another function that can be used later
+    1. In the global scope, "this" simply refers to the window Object. "this" should never be used for this purpose.
+    2. Implicit Binding - when the function is invoked, "this" refers to the object it is nested inside of.
+    3. New Binding - uses a constructor function and the "new" keyword to create NEW objects, that "this" would then refer to.
+    4. Explicit Binding - when we define "this" ourselves, and have it refer to a specific object or set of objects that we choose.
   */
   
   
